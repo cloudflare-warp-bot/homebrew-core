@@ -55,10 +55,10 @@ jobs:
       - name: Install gems
         run: brew install-bundler-gems
 
-      - name: Install skopeo for bottle upload
+      - name: Install skopeo and unzip for bottle upload
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y skopeo
+          sudo apt-get install -y skopeo unzip
 
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
